@@ -1,0 +1,16 @@
+#nav {
+  letter-spacing: -1px;
+  padding-top: 9px;
+}
+
+#logo {
+  margin-right: 10px;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
