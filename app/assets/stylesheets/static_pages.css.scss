@@ -45,3 +45,13 @@ footer {
     }
   }
 }
+
+#contact {
+  padding-left: 15px;
+  a {
+    color: gray;
+    &:hover {
+      color: darkgray;
+    }
+  }
+}
