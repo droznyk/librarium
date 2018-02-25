@@ -1,0 +1,21 @@
+%nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg-dark{:id => "nav"}
+  %a.navbar-brand{:href => root_path, :id => "logo"} Librarium
+  %button.navbar-toggler{"aria-controls" => "navbarTogglerDemo02", "aria-expanded" => "false", 
+                         "aria-label" => "Toggle navigation", "data-target" => "#navbarTogglerDemo02", 
+                         "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarTogglerDemo02.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      %li.nav-item.active
+        %a.nav-link{:href => root_path}
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "#"} Link
+      %li.nav-item
+        %a.nav-link.disabled{:href => "#"} Disabled
+    %ul.navbar-nav.ml-auto.mt-2.mt-lg-0
+      %li.nav-item
+        %a.nav-link{:href => "#"} Log in
+      %li.nav-item
+        %a.nav-link{:href => "#"} Sign up
