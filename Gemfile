@@ -9,6 +9,7 @@ end
 gem 'bootstrap', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.2'
 # gem 'capistrano-rails', group: :development
+gem 'devise'
 gem "haml-rails", "~> 1.0"
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
@@ -26,6 +27,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
 end
 

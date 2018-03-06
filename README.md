@@ -1,24 +1,15 @@
-# README
+[![Build Status](https://travis-ci.org/droznyk/librarium.svg?branch=development)](https://travis-ci.org/droznyk/librarium)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#LIBRARIUM
+Librarium is #1 app for everyone who needs help with managing home library. With Librarium you can create libraries, add books to them and share with friends or family (or both)! 
 
-Things you may want to cover:
+##Technology stack:
 
-* Ruby version
+|     Technology    |   version      |
+| ------------- |:-------------:|
+|     Ruby    |   2.5.0p0      |
+| Rails    | 5.1.5 |
+| PostgreSQL   | 9.5.12    |
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+More details soon...
+Stay tuned!
