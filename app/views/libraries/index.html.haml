@@ -1,0 +1,10 @@
+.container
+  .row
+    .col.col-md-6
+      %h1 Your libraries:
+      -@libraries.each_with_index do |library, index|
+        .col.col-md-6.offset-md-1
+          %p
+            = "#{index + 1}. "
+            = link_to library.name, library_path(library)
+          %p= library.description
