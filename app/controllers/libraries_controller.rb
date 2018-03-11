@@ -1,5 +1,5 @@
 class LibrariesController < ApplicationController
-  before_action :fetch_library, only: %w[show edit destroy]
+  before_action :fetch_library, only: %w[show edit update destroy]
 
   def index
     @libraries = Library.all
@@ -21,6 +21,18 @@ class LibrariesController < ApplicationController
   end
 
   def show; end
+
+  def edit; end
+
+  def update
+    if @library.update(library_params)
+      flash[:notice] = "#{@library.name} has been updated successfully!"
+      redirect_to library_path(@library)
+    else
+      flash[:error] = @library.errors.full_messages
+      render :edit
+    end
+  end
 
   def destroy
     flash[:notice] = "#{@library.name.capitalize} has been destroyed successfully!"
