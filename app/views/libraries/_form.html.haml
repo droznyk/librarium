@@ -1,0 +1,9 @@
+= form_for @library do |f|
+  .col.col-md-10
+    .form-group
+      %p= f.label 'Library name:'
+      %p= f.text_field :name, placeholder: 'Type your library name here...', class: 'form-control'
+    .form-group
+      %p= f.label 'Library description:'
+      %p= f.text_area :description, placeholder: 'Type your library description here...', class: 'form-control'
+    = f.submit "Submit", class: 'btn btn-primary btn-lg'
