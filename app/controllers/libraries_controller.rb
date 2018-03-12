@@ -1,5 +1,6 @@
 class LibrariesController < ApplicationController
-  before_action :fetch_library, only: %w[show edit update destroy]
+  before_action :fetch_library, only: %i[show edit update destroy]
+  before_action :is_owner?, only: %i[edit update destroy]
 
   def index
     @libraries = Library.all
@@ -50,4 +51,10 @@ class LibrariesController < ApplicationController
     @library = Library.find(params[:id])
   end
 
+  def is_owner?
+    unless current_user == @library.user
+      flash[:error] = 'You are not a owner!'
+      redirect_to root_path
+    end
+  end
 end
