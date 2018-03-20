@@ -1,0 +1,12 @@
+= form_for @book do |f|
+  .col.col-md-10
+    .form-group
+      %p= f.label 'Book title:'
+      %p= f.text_field :title, placeholder: 'Type your book title here...', class: 'form-control'
+    .form-group
+      %p= f.label 'Author:'
+      %p= f.text_field :author, placeholder: 'Type the book author description here...', class: 'form-control'
+    .form-group
+      %p= f.label 'Short description:'
+      %p= f.text_area :short_description, placeholder: 'Type short description here...', class: 'form-control'
+    = f.submit "Submit", class: 'btn btn-primary btn-lg'

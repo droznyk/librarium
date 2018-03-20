@@ -1,0 +1,9 @@
+.container
+  .row
+    .col.col-md-6
+      %h1 Available books:
+      -@books.each_with_index do |book, index|
+        .col.col-md-6.offset-md-1
+          %p
+            = "#{index + 1}. "
+            = link_to book.title, book_path(book)
