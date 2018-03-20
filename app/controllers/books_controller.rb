@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = "#{@book.name} has been created successfully!"
+      flash[:notice] = "#{@book.title} has been created successfully!"
       redirect_to book_path(@book)
     else
       flash[:error] = @book.errors.full_messages
@@ -26,7 +26,7 @@ class BooksController < ApplicationController
 
   def update
     if @book.update(book_params)
-      flash[:notice] = "#{@book.name} has been updated successfully!"
+      flash[:notice] = "#{@book.title} has been updated successfully!"
       redirect_to book_path(@book)
     else
       flash[:error] = @book.erorrs.full_messages
@@ -36,7 +36,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    flash[:notice] = "#{@book.name} has been deleted!"
+    flash[:notice] = "#{@book.title} has been deleted!"
     redirect_to books_path
   end
 
