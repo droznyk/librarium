@@ -1,0 +1,10 @@
+.container
+  .row
+    .col.col-md-6
+      %h1= "#{@book.title} by #{@book.author}"
+      .col.col-md-10
+        %p Description:
+        %p= @book.short_description
+      %p Actions:
+      = link_to 'Edit book', edit_book_path(@book), class: 'btn btn-primary btn-lg'
+      = link_to 'Delete book', book_path(@book), data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger btn-lg' 
