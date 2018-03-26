@@ -5,6 +5,18 @@
       .col.col-md-10
         %p Description:
         %p= @library.description
+        %p Books in this library:
+        %table.table.table-condensed.table-striped.table.hover.table-bordered
+          %thead
+            %tr
+              %th.text-center No.
+              %th Title
+          %tbody
+            - @library.books.each_with_index do |book, i|
+              %tr
+                %td.w-25.text-center= i+1
+                %td= link_to book.title, book_path(@library)
       %p Actions:
+      = link_to 'Add books to library', add_books_to_library_path(@library), class: 'btn btn-dark btn-lg'
       = link_to 'Edit library', edit_library_path(@library), class: 'btn btn-primary btn-lg'
       = link_to 'Delete library', library_path(@library), data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger btn-lg' 
