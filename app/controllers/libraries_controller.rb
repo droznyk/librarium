@@ -1,5 +1,5 @@
 class LibrariesController < ApplicationController
-  before_action :fetch_library, only: %i[show edit update destroy]
+  before_action :fetch_library, only: %i[show edit update destroy add_books_to_library]
   before_action :is_owner?, only: %i[edit update destroy]
 
   def index
@@ -41,10 +41,14 @@ class LibrariesController < ApplicationController
     redirect_to libraries_path
   end
 
+  def add_books_to_library
+    @all_books = Book.all
+  end
+
   private
 
   def library_params
-    params.require(:library).permit(:name, :description)
+    params.require(:library).permit(:name, :description, :user_id, book_ids:[])
   end
 
   def fetch_library
