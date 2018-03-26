@@ -1,0 +1,8 @@
+.container
+  .row
+    .col.col-md-6
+      = form_for @library do |f|
+        .col.col-md-10
+          .form-group
+            %p= f.collection_check_boxes :book_ids, @all_books, :id, :title
+          = f.submit "Submit", class: 'btn btn-primary btn-lg'
